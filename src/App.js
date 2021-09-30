@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function App() {
-  baseUrl = '/api/test-function'
+  
 
   const [stateVariable, setStateVariable] = useState('');
   useEffect(() => {
     setStateVariable("Fred")
+    const baseUrl = '/api/test-function'
     axios.get(baseUrl).then((response) => {
       setStateVariable(response.data)
     })
